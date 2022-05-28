@@ -26,18 +26,12 @@ module.exports = {
       errors: true
     },
     proxy: {
-      '/api': {
+      '/admin': {
         target: process.env.VUE_APP_BASE_API,
         changeOrigin: true,
+        ws: false,
         pathRewrite: {
-          '^/api': 'api'
-        }
-      },
-      '/auth': {
-        target: process.env.VUE_APP_BASE_API,
-        changeOrigin: true,
-        pathRewrite: {
-          '^/auth': 'auth'
+          '^/admin': 'admin'
         }
       }
     }

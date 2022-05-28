@@ -2,14 +2,14 @@ import request from '@/utils/request'
 
 export function getAllTable() {
   return request({
-    url: 'api/generator/tables/all',
+    url: 'admin/generator/tables/all',
     method: 'get'
   })
 }
 
 export function generator(tableName, type) {
   return request({
-    url: 'api/generator/' + tableName + '/' + type,
+    url: 'admin/generator/' + tableName + '/' + type,
     method: 'post',
     responseType: type === 2 ? 'blob' : ''
   })
@@ -17,7 +17,7 @@ export function generator(tableName, type) {
 
 export function save(data) {
   return request({
-    url: 'api/generator',
+    url: 'admin/generator',
     data,
     method: 'put'
   })
@@ -25,7 +25,7 @@ export function save(data) {
 
 export function sync(tables) {
   return request({
-    url: 'api/generator/sync',
+    url: 'admin/generator/sync',
     method: 'post',
     data: tables
   })

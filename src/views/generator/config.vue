@@ -248,7 +248,7 @@ export default {
   },
   methods: {
     beforeInit() {
-      this.url = 'api/generator/columns'
+      this.url = 'admin/generator/columns'
       const tableName = this.tableName
       this.params = { tableName }
       return true
